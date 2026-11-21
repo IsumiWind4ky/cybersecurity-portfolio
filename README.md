@@ -15,17 +15,26 @@ The portfolio is published with GitHub Pages. Configure **Settings → Pages →
 ├── _config.yml
 ├── .gitignore
 └── projects/
-    └── scapy-tcp-syn-scanner/
+    ├── scapy-tcp-syn-scanner/
+    │   ├── README.md
+    │   ├── requirements.txt
+    │   ├── src/
+    │   ├── tests/
+    │   └── evidence/
+    │
+    └── virtual-lab-reconnaissance/
         ├── README.md
-        ├── requirements.txt
-        ├── src/
-        ├── tests/
         └── evidence/
+            ├── README.md
+            ├── lab1-virtual-machine-setup/
+            └── lab2-network-reconnaissance/
 ```
 
 ## Project scope and responsible use
 
 The Scapy TCP SYN scanner is documented for the authorised WQE7002 course laboratory only. Its recorded target and port scope are course-assignment parameters. Do not use the tool outside systems and ranges for which explicit authorisation has been granted.
+
+The Virtual Lab Setup and Network Reconnaissance project documents activities conducted within an isolated educational Host-only network using the designated Metasploitable 2 target. No exploitation was performed, and the activities were limited to the authorised laboratory environment.
 
 ## Development Workflow
 

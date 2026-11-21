@@ -33,7 +33,7 @@ The levels below reflect my current practical experience.
 | Working Knowledge | Docker | Manages containers, creates custom networks, and builds isolated lab environments. |
 | Beginner | GNS3 | Basic familiarity with limited hands-on experience. |
 | Beginner | Steghide, Stegseek, Binwalk, John the Ripper | Completes introductory steganography, file-analysis, and password-auditing exercises by following lab instructions. |
-| Beginner | Git / GitHub | Has configured the development environment and is learning version control and collaborative workflows. |
+| Working Knowledge | Git / GitHub | Uses basic Git workflows, including feature branches, commits, pushes, Pull Requests, merges, and synchronising local and remote branches. |
 
 ## Certifications and Training
 
@@ -75,6 +75,19 @@ Developed a Python TCP SYN scanner using Scapy for an authorised, isolated cours
 The recorded experiment targeted four assigned TCP ports (22, 80, 443, and 8080) on the course-lab host `172.28.70.10`. Scapy observed all four ports as open, and the recorded Nmap validation reported the same states. The submitted experiment report records 39 passing automated tests. Supporting evidence includes the scan scope, JSON results, Nmap XML, PCAP capture, summary, and SHA-256 manifest.
 
 The complete source code, tests, setup notes, and evidence are available in [`projects/scapy-tcp-syn-scanner/`](projects/scapy-tcp-syn-scanner/).
+
+### Project 02 — Virtual Lab Setup and Network Reconnaissance
+
+**Course:** WQE7011 — Advanced Computer Penetration and Defence  
+**Category:** Network Security / Reconnaissance  
+**Environment:** Kali Linux, Metasploitable 2, Oracle VirtualBox  
+**Tools:** Nmap, Oracle VirtualBox
+
+Configured an isolated cybersecurity laboratory using Kali Linux as the attacker machine and Metasploitable 2 as the target. Completed network connectivity verification, host discovery, TCP port scanning, and service/version detection within a Host-only network.
+
+The laboratory identified four active hosts within the 192.168.56.0/24 subnet and multiple exposed TCP services on the designated target. Security observations included the outdated vsftpd 2.3.4 version and the potential credential-exposure risk associated with Telnet. No exploitation was performed.
+
+The complete project documentation and 12 laboratory evidence screenshots are available in [`projects/virtual-lab-reconnaissance/`](projects/virtual-lab-reconnaissance/).
 
 ## Learning Journey
 
