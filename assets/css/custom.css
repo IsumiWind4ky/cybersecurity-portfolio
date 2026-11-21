@@ -4,6 +4,7 @@
    Anime Background + Frosted Glass Content
    ========================================================= */
 
+
 /* 1. Global settings */
 
 :root {
@@ -220,6 +221,13 @@ body::before {
 /* Hide automatically generated Minima post title */
 .page-content .post-header .post-title {
   display: none !important;
+}
+
+/* Remove the empty space left by the hidden title */
+.page-content .post-header {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .page-content h1,
@@ -480,16 +488,19 @@ body::before {
   text-align: center;
 }
 
+/* English footer description */
 .site-footer p {
   margin: 0;
+  font-size: 20px;
   line-height: 1.6;
 }
 
+/* Footer link hover */
 .site-footer a:hover {
   color: var(--nav-hover);
 }
 
-/* Footer quote - no divider */
+/* Chinese footer quote and divider */
 .site-footer .wrapper::after {
   content: "你们的生命不会呐喊吗？";
 
@@ -497,8 +508,8 @@ body::before {
   width: 100%;
   box-sizing: border-box;
 
-  margin-top: 10px;
-  padding-top: 0;
+  margin-top: 22px;
+  padding-top: 16px;
 
   color: #ffffff;
   font-size: 20px;
@@ -507,7 +518,8 @@ body::before {
   line-height: 1.6;
 
   text-align: center;
-  border: none;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
 
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
@@ -595,8 +607,14 @@ body::before {
     font-size: 14.5px;
   }
 
+  .site-footer p {
+    font-size: 20px;
+  }
+
   .site-footer .wrapper::after {
-    font-size: 16px;
+    margin-top: 18px;
+    padding-top: 13px;
+    font-size: 20px;
     letter-spacing: 1px;
   }
 }
