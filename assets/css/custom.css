@@ -339,22 +339,37 @@ body::before {
 }
 
 
+
 /* 8. Code blocks
    --------------------------------------------------------- */
 
-/* Code block containers */
+/* Rouge / Jekyll code block containers */
+
+.page-content .highlighter-rouge,
+.page-content .highlighter-rouge .highlight,
+.page-content .highlight,
+.page-content figure.highlight {
+  color: #f1f5fb !important;
+  background: #182538 !important;
+  border-radius: 10px;
+}
+
+/* Main code area */
 
 .page-content pre,
+.page-content pre.highlight,
 .page-content .highlight pre,
-.page-content div.highlighter-rouge pre,
+.page-content .highlighter-rouge pre,
 .page-content figure.highlight pre {
   box-sizing: border-box;
+  display: block;
+  width: 100%;
   padding: 18px;
-  margin: 18px 0;
+  margin: 0;
   overflow-x: auto;
 
-  color: #e8eef7 !important;
-  background: rgba(24, 37, 56, 0.96) !important;
+  color: #f1f5fb !important;
+  background: #182538 !important;
 
   border: 1px solid rgba(130, 160, 195, 0.35);
   border-radius: 10px;
@@ -366,16 +381,26 @@ body::before {
   box-shadow: 0 4px 14px rgba(20, 35, 60, 0.12);
 }
 
-/* Syntax-highlighted text */
+/* Force all code text and Rouge syntax spans to be readable */
 
-.page-content pre code,
-.page-content pre code *,
+.page-content .highlighter-rouge pre,
+.page-content .highlighter-rouge pre *,
+.page-content .highlight pre,
 .page-content .highlight pre *,
-.page-content div.highlighter-rouge pre *,
+.page-content figure.highlight pre,
 .page-content figure.highlight pre * {
-  color: #e8eef7 !important;
-  background: transparent !important;
+  color: #f1f5fb !important;
+  background-color: transparent !important;
+  -webkit-text-fill-color: #f1f5fb !important;
   text-shadow: none !important;
+}
+
+/* Keep code block background dark */
+
+.page-content .highlighter-rouge pre,
+.page-content .highlight pre,
+.page-content figure.highlight pre {
+  background: #182538 !important;
 }
 
 /* Inline code */
@@ -385,8 +410,9 @@ body::before {
 .page-content td code {
   padding: 2px 6px;
 
-  color: #244f7a;
-  background: rgba(220, 233, 248, 0.95);
+  color: #244f7a !important;
+  -webkit-text-fill-color: #244f7a !important;
+  background: rgba(220, 233, 248, 0.95) !important;
 
   border: 1px solid rgba(190, 210, 232, 0.7);
   border-radius: 4px;
@@ -394,18 +420,12 @@ body::before {
   font-size: 0.9em;
 }
 
-/* Highlight container spacing */
+/* Code block spacing */
 
 .page-content .highlight,
 .page-content div.highlighter-rouge,
 .page-content figure.highlight {
   margin: 18px 0;
-  background: transparent;
-  border-radius: 10px;
-}
-
-.page-content .highlight pre {
-  margin: 0;
 }
 
 
