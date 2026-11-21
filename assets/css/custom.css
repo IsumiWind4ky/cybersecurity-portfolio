@@ -18,8 +18,8 @@
   --heading-primary: #17243a;
   --heading-secondary: #315b83;
 
-  --glass-bg: rgba(255, 255, 255, 0.90);
-  --glass-border: rgba(255, 255, 255, 0.72);
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.55);
 
   --accent: #3978b9;
 }
@@ -50,8 +50,8 @@ body::before {
 
   background-image:
     linear-gradient(
-      rgba(235, 241, 250, 0.20),
-      rgba(235, 241, 250, 0.20)
+      rgba(235, 241, 250, 0.12),
+      rgba(235, 241, 250, 0.12)
     ),
     url("../images/anime-bg.jpg");
 
@@ -219,15 +219,15 @@ body::before {
 
   background: var(--glass-bg);
 
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 
   border: 1px solid var(--glass-border);
   border-radius: 18px;
 
   box-shadow:
-    0 12px 40px rgba(20, 35, 60, 0.15),
-    0 2px 8px rgba(20, 35, 60, 0.05);
+    0 12px 40px rgba(20, 35, 60, 0.10),
+    0 2px 8px rgba(20, 35, 60, 0.04);
 }
 
 
@@ -399,26 +399,86 @@ body::before {
    --------------------------------------------------------- */
 
 .site-footer {
-  padding: 25px 0;
+  padding: 28px 20px 22px;
 
   color: #e7edf6;
-  background: rgba(23, 36, 58, 0.94);
+  background: rgba(23, 36, 58, 0.90);
 
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .site-footer .wrapper {
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
+}
+
+/* Center the original Minima footer columns */
+
+.site-footer .footer-col-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.site-footer .footer-col {
+  float: none;
+  width: 100%;
+  max-width: 650px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.site-footer .footer-heading {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .site-footer,
 .site-footer p,
+.site-footer li,
 .site-footer a {
   color: #e7edf6;
+  line-height: 1.7;
+}
+
+.site-footer .contact-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .site-footer a:hover {
   color: var(--nav-hover);
+}
+
+/* Footer quote */
+
+.site-footer .wrapper::after {
+  content: "你们的生命不会呐喊吗？";
+
+  display: block;
+  max-width: 650px;
+  margin: 22px auto 0;
+  padding-top: 18px;
+
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.8;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -506,35 +566,17 @@ body::before {
   .page-content li {
     font-size: 14.5px;
   }
-}
 
+  .site-footer {
+    padding: 24px 16px 20px;
+  }
 
-/* 13. Footer quote
-   --------------------------------------------------------- */
+  .site-footer .footer-heading {
+    font-size: 18px;
+  }
 
-.site-footer .wrapper::after {
-  content: "你们的生命不会呐喊吗？";
-
-  display: block;
-  margin-top: 18px;
-  padding-top: 18px;
-
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  line-height: 1.8;
-
-  text-align: center;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-}
-
-@media screen and (max-width: 480px) {
   .site-footer .wrapper::after {
-    font-size: 16px;
+    font-size: 17px;
     letter-spacing: 1px;
   }
 }
