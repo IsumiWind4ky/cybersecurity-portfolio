@@ -1,119 +1,540 @@
+
+/* =========================================================
+   Cybersecurity Portfolio - Custom Theme
+   Static Anime Background + Frosted Glass Content
+   ========================================================= */
+
+
+/* 1. Global settings
+   --------------------------------------------------------- */
+
+:root {
+  --nav-bg: #17243a;
+  --nav-text: #ffffff;
+  --nav-hover: #8fc5ff;
+
+  --text-primary: #263244;
+  --text-secondary: #526174;
+  --heading-primary: #17243a;
+  --heading-secondary: #315b83;
+
+  --glass-bg: rgba(255, 255, 255, 0.90);
+  --glass-border: rgba(255, 255, 255, 0.72);
+
+  --accent: #3978b9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text-primary);
+  background: #eaf0f7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+
+/* 2. Static anime background
+   --------------------------------------------------------- */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background-image:
+    linear-gradient(
+      rgba(235, 241, 250, 0.20),
+      rgba(235, 241, 250, 0.20)
+    ),
+    url("../images/anime-bg.jpg");
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* 3. Navigation bar
+   --------------------------------------------------------- */
+
 .custom-site-header {
-  background: #17243a;
-  border-top: none;
-  border-bottom: 1px solid #30445e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  background: var(--nav-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
 }
 
 .custom-nav-wrapper {
+  max-width: 1100px;
+  min-height: 68px;
+  margin: 0 auto;
+  padding: 0 24px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 68px;
-  gap: 24px;
+  gap: 30px;
 }
 
 .custom-site-header .site-title {
-  color: #ffffff;
-  font-size: 22px;
+  color: var(--nav-text) !important;
+  font-size: 21px;
   font-weight: 700;
+  text-decoration: none;
   letter-spacing: 0.2px;
 }
 
 .custom-site-header .site-title:hover {
-  color: #d7e7f8;
-  text-decoration: none;
+  color: var(--nav-hover) !important;
 }
 
 .custom-nav {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 30px;
 }
 
 .custom-nav-link {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 11px 17px;
-  color: #e5edf7;
+  gap: 6px;
+
+  color: var(--nav-text);
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 7px;
+
   cursor: pointer;
-  list-style: none;
+  transition: color 0.2s ease;
 }
 
-.custom-nav-link:hover,
-.custom-dropdown[open] > summary {
-  background: #34577d;
-  color: #ffffff;
-  text-decoration: none;
+.custom-nav-link:hover {
+  color: var(--nav-hover);
 }
+
+
+/* 4. Projects dropdown
+   --------------------------------------------------------- */
 
 .custom-dropdown {
   position: relative;
 }
 
-.custom-dropdown > summary::-webkit-details-marker {
+.custom-dropdown summary {
+  list-style: none;
+}
+
+.custom-dropdown summary::-webkit-details-marker {
   display: none;
 }
 
 .dropdown-arrow {
-  font-size: 12px;
+  font-size: 11px;
+  transition: transform 0.2s ease;
+}
+
+.custom-dropdown[open] .dropdown-arrow {
+  transform: rotate(180deg);
 }
 
 .custom-dropdown-menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 18px);
   right: 0;
-  z-index: 1000;
-  width: 310px;
-  padding: 7px;
-  background: #ffffff;
-  border: 1px solid #dce3eb;
-  border-radius: 9px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+
+  min-width: 310px;
+  padding: 8px;
+
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(220, 228, 239, 0.9);
+  border-radius: 12px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+  display: none;
+}
+
+.custom-dropdown[open] .custom-dropdown-menu {
+  display: block;
 }
 
 .custom-dropdown-menu a {
-  display: block;
-  padding: 12px;
-  color: #24364b;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 14px;
+  border-radius: 8px;
+
+  color: #263244;
   font-size: 14px;
   line-height: 1.5;
-  border-radius: 6px;
   text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .custom-dropdown-menu a:hover {
-  background: #edf3f9;
-  color: #173c65;
+  color: #1d5f9e;
+  background: #edf5ff;
 }
 
 .project-number {
-  display: inline-block;
-  margin-right: 5px;
-  color: #527ba6;
+  flex-shrink: 0;
+
+  color: #3978b9;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+/* 5. Main content area
+   --------------------------------------------------------- */
+
+.page-content {
+  padding: 42px 0 55px;
+  background: transparent;
+}
+
+.page-content .wrapper {
+  box-sizing: border-box;
+
+  max-width: 900px;
+  padding: 38px 46px;
+  margin: 0 auto;
+
+  background: var(--glass-bg);
+
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 40px rgba(20, 35, 60, 0.15),
+    0 2px 8px rgba(20, 35, 60, 0.05);
+}
+
+
+/* 6. Typography
+   --------------------------------------------------------- */
+
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4 {
+  color: var(--heading-primary);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.page-content h1 {
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.page-content h2 {
+  font-size: 25px;
+  margin-top: 36px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid rgba(49, 91, 131, 0.18);
+}
+
+.page-content h3 {
+  color: var(--heading-secondary);
+  font-size: 20px;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.page-content p,
+.page-content li {
+  color: var(--text-primary);
+  font-size: 15.5px;
+  line-height: 1.85;
+}
+
+.page-content p {
+  margin-bottom: 16px;
+}
+
+.page-content strong {
+  color: #17243a;
   font-weight: 700;
 }
 
-@media screen and (max-width: 650px) {
+.page-content a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.page-content a:hover {
+  color: #1d5f9e;
+  text-decoration: underline;
+}
+
+
+/* 7. Tables
+   --------------------------------------------------------- */
+
+.page-content table {
+  width: 100%;
+  margin: 22px 0;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  overflow: hidden;
+  border: 1px solid rgba(210, 220, 232, 0.9);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+}
+
+.page-content th {
+  padding: 13px 14px;
+
+  color: #17243a;
+  background: rgba(225, 235, 247, 0.95);
+
+  font-weight: 700;
+  text-align: left;
+}
+
+.page-content td {
+  padding: 12px 14px;
+
+  color: var(--text-primary);
+  line-height: 1.7;
+
+  border-top: 1px solid rgba(210, 220, 232, 0.7);
+}
+
+.page-content tr:nth-child(even) td {
+  background: rgba(238, 244, 251, 0.65);
+}
+
+
+/* 8. Code blocks
+   --------------------------------------------------------- */
+
+.page-content pre {
+  padding: 18px;
+  overflow-x: auto;
+
+  color: #e8eef7;
+  background: #1d293b;
+
+  border: 1px solid rgba(30, 45, 65, 0.2);
+  border-radius: 10px;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.page-content code {
+  padding: 2px 5px;
+
+  color: #244f7a;
+  background: rgba(220, 233, 248, 0.8);
+
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.page-content pre code {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+}
+
+
+/* 9. Blockquotes
+   --------------------------------------------------------- */
+
+.page-content blockquote {
+  margin: 22px 0;
+  padding: 14px 20px;
+
+  color: #40536b;
+  background: rgba(229, 239, 250, 0.82);
+
+  border-left: 4px solid #3978b9;
+  border-radius: 0 8px 8px 0;
+}
+
+
+/* 10. Images
+   --------------------------------------------------------- */
+
+.page-content img {
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(20, 35, 60, 0.10);
+}
+
+
+/* 11. Footer
+   --------------------------------------------------------- */
+
+.site-footer {
+  padding: 25px 0;
+
+  color: #e7edf6;
+  background: rgba(23, 36, 58, 0.94);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.site-footer .wrapper {
+  text-align: center;
+}
+
+.site-footer,
+.site-footer p,
+.site-footer a {
+  color: #e7edf6;
+}
+
+.site-footer a:hover {
+  color: var(--nav-hover);
+}
+
+
+/* 12. Responsive layout
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+
   .custom-nav-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    gap: 8px;
+    min-height: 62px;
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .custom-site-header .site-title {
+    font-size: 17px;
   }
 
   .custom-nav {
+    gap: 16px;
+  }
+
+  .custom-nav-link {
+    font-size: 14px;
+  }
+
+  .page-content {
+    padding: 24px 12px 36px;
+  }
+
+  .page-content .wrapper {
+    padding: 26px 22px;
+    border-radius: 14px;
+  }
+
+  .page-content h1 {
+    font-size: 27px;
+  }
+
+  .page-content h2 {
+    font-size: 22px;
+  }
+
+  .page-content h3 {
+    font-size: 18px;
+  }
+
+  .page-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: normal;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .custom-nav-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .custom-site-header .site-title {
     width: 100%;
+    text-align: center;
+  }
+
+  .custom-nav {
+    justify-content: center;
+    gap: 28px;
   }
 
   .custom-dropdown-menu {
-    right: auto;
-    left: 0;
-    width: min(310px, 85vw);
+    position: absolute;
+    right: -20px;
+    min-width: min(310px, calc(100vw - 28px));
+  }
+
+  .page-content .wrapper {
+    padding: 22px 16px;
+  }
+
+  .page-content p,
+  .page-content li {
+    font-size: 14.5px;
+  }
+}
+
+
+/* 13. Footer quote
+   --------------------------------------------------------- */
+
+.site-footer .wrapper::after {
+  content: "你们的生命不会呐喊吗？";
+
+  display: block;
+  margin-top: 18px;
+  padding-top: 18px;
+
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.8;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+@media screen and (max-width: 480px) {
+  .site-footer .wrapper::after {
+    font-size: 16px;
+    letter-spacing: 1px;
   }
 }
