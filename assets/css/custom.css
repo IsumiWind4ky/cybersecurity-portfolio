@@ -18,13 +18,8 @@
   --heading-primary: #17243a;
   --heading-secondary: #315b83;
 
-<<<<<<< Updated upstream
-  --glass-bg: rgba(255, 255, 255, 0.90);
-  --glass-border: rgba(255, 255, 255, 0.72);
-=======
-  --glass-bg: rgba(255, 255, 255, 0.62);
-  --glass-border: rgba(255, 255, 255, 0.42);
->>>>>>> Stashed changes
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.58);
 
   --accent: #3978b9;
 }
@@ -188,9 +183,7 @@ body::before {
   line-height: 1.5;
   text-decoration: none;
 
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .custom-dropdown-menu a:hover {
@@ -200,7 +193,6 @@ body::before {
 
 .project-number {
   flex-shrink: 0;
-
   color: #3978b9;
   font-size: 12px;
   font-weight: 800;
@@ -217,7 +209,6 @@ body::before {
 
 .page-content .wrapper {
   box-sizing: border-box;
-
   max-width: 900px;
   padding: 38px 46px;
   margin: 0 auto;
@@ -311,7 +302,7 @@ body::before {
   border: 1px solid rgba(210, 220, 232, 0.9);
   border-radius: 10px;
 
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.82);
   font-size: 14px;
 }
 
@@ -335,26 +326,26 @@ body::before {
 }
 
 .page-content tr:nth-child(even) td {
-  background: rgba(238, 244, 251, 0.65);
+  background: rgba(238, 244, 251, 0.78);
 }
 
 
-
-/* 8. Code blocks
+/* 8. Code blocks and inline code
    --------------------------------------------------------- */
 
-/* Rouge / Jekyll code block containers */
+/* Jekyll / Rouge code block containers */
 
 .page-content .highlighter-rouge,
 .page-content .highlighter-rouge .highlight,
 .page-content .highlight,
 .page-content figure.highlight {
-  color: #f1f5fb !important;
-  background: #182538 !important;
+  margin: 18px 0;
+  color: #263b55 !important;
+  background: transparent !important;
   border-radius: 10px;
 }
 
-/* Main code area */
+/* Main code block */
 
 .page-content pre,
 .page-content pre.highlight,
@@ -368,64 +359,60 @@ body::before {
   margin: 0;
   overflow-x: auto;
 
-  color: #f1f5fb !important;
-  background: #182538 !important;
+  color: #263b55 !important;
+  background: rgba(235, 241, 249, 0.94) !important;
 
-  border: 1px solid rgba(130, 160, 195, 0.35);
+  border: 1px solid rgba(170, 190, 215, 0.75);
   border-radius: 10px;
 
-  font-family: "Consolas", "Cascadia Code", monospace;
+  font-family: Consolas, "Cascadia Code", monospace;
   font-size: 13.5px;
   line-height: 1.75;
 
-  box-shadow: 0 4px 14px rgba(20, 35, 60, 0.12);
+  box-shadow: 0 4px 14px rgba(20, 35, 60, 0.08);
 }
 
-/* Force all code text and Rouge syntax spans to be readable */
+/* Ensure code text and Rouge syntax spans remain readable */
 
-.page-content .highlighter-rouge pre,
-.page-content .highlighter-rouge pre *,
-.page-content .highlight pre,
+.page-content pre code,
+.page-content pre code *,
 .page-content .highlight pre *,
-.page-content figure.highlight pre,
+.page-content .highlighter-rouge pre *,
 .page-content figure.highlight pre * {
-  color: #f1f5fb !important;
+  color: #263b55 !important;
+  background: transparent !important;
   background-color: transparent !important;
-  -webkit-text-fill-color: #f1f5fb !important;
+  -webkit-text-fill-color: #263b55 !important;
   text-shadow: none !important;
+  opacity: 1 !important;
 }
 
-/* Keep code block background dark */
-
-.page-content .highlighter-rouge pre,
-.page-content .highlight pre,
-.page-content figure.highlight pre {
-  background: #182538 !important;
-}
-
-/* Inline code */
+/* Inline code in paragraphs, lists, headings and tables */
 
 .page-content p code,
 .page-content li code,
-.page-content td code {
+.page-content td code,
+.page-content th code,
+.page-content h1 code,
+.page-content h2 code,
+.page-content h3 code,
+.page-content blockquote code {
   padding: 2px 6px;
 
-  color: #244f7a !important;
-  -webkit-text-fill-color: #244f7a !important;
-  background: rgba(220, 233, 248, 0.95) !important;
+  color: #24466b !important;
+  -webkit-text-fill-color: #24466b !important;
 
-  border: 1px solid rgba(190, 210, 232, 0.7);
-  border-radius: 4px;
+  background: rgba(221, 234, 248, 0.96) !important;
 
+  border: 1px solid rgba(170, 195, 220, 0.65);
+  border-radius: 5px;
+
+  font-family: Consolas, "Cascadia Code", monospace;
   font-size: 0.9em;
-}
+  font-weight: 500;
 
-/* Code block spacing */
-
-.page-content .highlight,
-.page-content div.highlighter-rouge,
-.page-content figure.highlight {
-  margin: 18px 0;
+  text-shadow: none !important;
+  opacity: 1 !important;
 }
 
 
