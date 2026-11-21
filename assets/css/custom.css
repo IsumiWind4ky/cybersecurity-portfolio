@@ -4,9 +4,7 @@
    Anime Background + Frosted Glass Content
    ========================================================= */
 
-
-/* 1. Global settings
-   --------------------------------------------------------- */
+/* 1. Global settings */
 
 :root {
   --nav-bg: #17243a;
@@ -39,8 +37,7 @@ body {
 }
 
 
-/* 2. Static anime background
-   --------------------------------------------------------- */
+/* 2. Static anime background */
 
 body::before {
   content: "";
@@ -61,31 +58,28 @@ body::before {
 }
 
 
-/* 3. Navigation bar
-   --------------------------------------------------------- */
+/* 3. Navigation bar */
 
 .custom-site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-
   width: 100%;
   background: var(--nav-bg);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
 }
 
 .custom-nav-wrapper {
-  max-width: 1100px;
-  min-height: 68px;
-  margin: 0 auto;
-  padding: 0 24px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+
+  max-width: 1100px;
+  min-height: 68px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .custom-site-header .site-title {
@@ -115,7 +109,6 @@ body::before {
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
-
   cursor: pointer;
   transition: color 0.2s ease;
 }
@@ -125,8 +118,7 @@ body::before {
 }
 
 
-/* 4. Projects dropdown
-   --------------------------------------------------------- */
+/* 4. Projects dropdown */
 
 .custom-dropdown {
   position: relative;
@@ -154,16 +146,14 @@ body::before {
   top: calc(100% + 18px);
   right: 0;
 
+  display: none;
   min-width: 310px;
   padding: 8px;
 
   background: rgba(255, 255, 255, 0.97);
   border: 1px solid rgba(220, 228, 239, 0.9);
   border-radius: 12px;
-
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-
-  display: none;
 }
 
 .custom-dropdown[open] .custom-dropdown-menu {
@@ -199,8 +189,7 @@ body::before {
 }
 
 
-/* 5. Main content area
-   --------------------------------------------------------- */
+/* 5. Main content area */
 
 .page-content {
   padding: 42px 0 55px;
@@ -210,11 +199,10 @@ body::before {
 .page-content .wrapper {
   box-sizing: border-box;
   max-width: 900px;
-  padding: 38px 46px;
   margin: 0 auto;
+  padding: 38px 46px;
 
   background: var(--glass-bg);
-
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
 
@@ -227,13 +215,10 @@ body::before {
 }
 
 
-/* 6. Page title and typography
-   --------------------------------------------------------- */
+/* 6. Page title and typography */
 
-/* Hide the automatic Minima page title.
-   Keep the original H1 heading written in README.md. */
-
-.page-content .page-heading {
+/* Hide automatically generated Minima post title */
+.page-content .post-header .post-title {
   display: none !important;
 }
 
@@ -247,25 +232,26 @@ body::before {
 }
 
 .page-content h1 {
-  font-size: 32px;
   margin-top: 0;
   margin-bottom: 24px;
+  font-size: 32px;
 }
 
 .page-content h2 {
-  font-size: 25px;
   margin-top: 36px;
   margin-bottom: 16px;
   padding-bottom: 8px;
 
+  font-size: 25px;
   border-bottom: 1px solid rgba(49, 91, 131, 0.18);
 }
 
 .page-content h3 {
-  color: var(--heading-secondary);
-  font-size: 20px;
   margin-top: 28px;
   margin-bottom: 12px;
+
+  color: var(--heading-secondary);
+  font-size: 20px;
 }
 
 .page-content p,
@@ -295,8 +281,7 @@ body::before {
 }
 
 
-/* 7. Tables
-   --------------------------------------------------------- */
+/* 7. Tables */
 
 .page-content table {
   width: 100%;
@@ -304,12 +289,12 @@ body::before {
 
   border-collapse: separate;
   border-spacing: 0;
-
   overflow: hidden;
+
   border: 1px solid rgba(210, 220, 232, 0.9);
   border-radius: 10px;
-
   background: rgba(255, 255, 255, 0.82);
+
   font-size: 14px;
 }
 
@@ -337,8 +322,7 @@ body::before {
 }
 
 
-/* 8. Code blocks and inline code
-   --------------------------------------------------------- */
+/* 8. Code blocks and inline code */
 
 .page-content .highlighter-rouge,
 .page-content .highlighter-rouge .highlight,
@@ -358,8 +342,8 @@ body::before {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  padding: 18px;
   margin: 0;
+  padding: 18px;
   overflow-x: auto;
 
   color: #263b55 !important;
@@ -415,8 +399,7 @@ body::before {
 }
 
 
-/* 9. Blockquotes
-   --------------------------------------------------------- */
+/* 9. Blockquotes */
 
 .page-content blockquote {
   margin: 22px 0;
@@ -430,8 +413,7 @@ body::before {
 }
 
 
-/* 10. Images
-   --------------------------------------------------------- */
+/* 10. Images */
 
 .page-content img {
   max-width: 100%;
@@ -442,11 +424,10 @@ body::before {
 }
 
 
-/* 11. Footer
-   --------------------------------------------------------- */
+/* 11. Footer */
 
 .site-footer {
-  padding: 30px 20px 26px;
+  padding: 16px 20px 14px;
 
   color: #e7edf6;
   background: rgba(23, 36, 58, 0.94);
@@ -461,19 +442,22 @@ body::before {
 }
 
 /* Hide the original Minima footer heading */
-
 .site-footer .footer-heading {
   display: none !important;
 }
 
-/* Center footer columns vertically */
+/* Hide the duplicate Cybersecurity Portfolio column */
+.site-footer .footer-col-1 {
+  display: none !important;
+}
 
+/* Keep the remaining footer content compact and centered */
 .site-footer .footer-col-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 0;
 
   margin: 0 auto;
   padding: 0;
@@ -498,15 +482,14 @@ body::before {
 
 .site-footer p {
   margin: 0;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .site-footer a:hover {
   color: var(--nav-hover);
 }
 
-/* Footer quote */
-
+/* Footer quote - no divider */
 .site-footer .wrapper::after {
   content: "你们的生命不会呐喊吗？";
 
@@ -514,27 +497,25 @@ body::before {
   width: 100%;
   box-sizing: border-box;
 
-  margin-top: 22px;
-  padding-top: 18px;
+  margin-top: 10px;
+  padding-top: 0;
 
   color: #ffffff;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
-  line-height: 1.8;
+  line-height: 1.6;
 
   text-align: center;
+  border: none;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 
-/* 12. Responsive layout
-   --------------------------------------------------------- */
+/* 12. Responsive layout */
 
 @media screen and (max-width: 768px) {
-
   .custom-nav-wrapper {
     min-height: 62px;
     padding: 0 16px;
@@ -582,7 +563,6 @@ body::before {
 }
 
 @media screen and (max-width: 480px) {
-
   .custom-nav-wrapper {
     flex-wrap: wrap;
     justify-content: center;
