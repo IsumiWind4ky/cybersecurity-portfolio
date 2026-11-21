@@ -1,7 +1,7 @@
 
 /* =========================================================
    Cybersecurity Portfolio - Custom Theme
-   Static Anime Background + Frosted Glass Content
+   Anime Background + Frosted Glass Content
    ========================================================= */
 
 
@@ -18,8 +18,8 @@
   --heading-primary: #17243a;
   --heading-secondary: #315b83;
 
-  --glass-bg: rgba(255, 255, 255, 0.78);
-  --glass-border: rgba(255, 255, 255, 0.58);
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.55);
 
   --accent: #3978b9;
 }
@@ -227,8 +227,15 @@ body::before {
 }
 
 
-/* 6. Typography
+/* 6. Page title and typography
    --------------------------------------------------------- */
+
+/* Hide the automatic Minima page title.
+   Keep the original H1 heading written in README.md. */
+
+.page-content .page-heading {
+  display: none !important;
+}
 
 .page-content h1,
 .page-content h2,
@@ -333,8 +340,6 @@ body::before {
 /* 8. Code blocks and inline code
    --------------------------------------------------------- */
 
-/* Jekyll / Rouge code block containers */
-
 .page-content .highlighter-rouge,
 .page-content .highlighter-rouge .highlight,
 .page-content .highlight,
@@ -344,8 +349,6 @@ body::before {
   background: transparent !important;
   border-radius: 10px;
 }
-
-/* Main code block */
 
 .page-content pre,
 .page-content pre.highlight,
@@ -372,8 +375,6 @@ body::before {
   box-shadow: 0 4px 14px rgba(20, 35, 60, 0.08);
 }
 
-/* Ensure code text and Rouge syntax spans remain readable */
-
 .page-content pre code,
 .page-content pre code *,
 .page-content .highlight pre *,
@@ -386,8 +387,6 @@ body::before {
   text-shadow: none !important;
   opacity: 1 !important;
 }
-
-/* Inline code in paragraphs, lists, headings and tables */
 
 .page-content p code,
 .page-content li code,
@@ -447,7 +446,7 @@ body::before {
    --------------------------------------------------------- */
 
 .site-footer {
-  padding: 25px 0;
+  padding: 30px 20px 26px;
 
   color: #e7edf6;
   background: rgba(23, 36, 58, 0.94);
@@ -456,6 +455,37 @@ body::before {
 }
 
 .site-footer .wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Hide the original Minima footer heading */
+
+.site-footer .footer-heading {
+  display: none !important;
+}
+
+/* Center footer columns vertically */
+
+.site-footer .footer-col-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.site-footer .footer-col {
+  float: none;
+  width: 100%;
+  max-width: 650px;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
@@ -463,10 +493,40 @@ body::before {
 .site-footer p,
 .site-footer a {
   color: #e7edf6;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  line-height: 1.7;
 }
 
 .site-footer a:hover {
   color: var(--nav-hover);
+}
+
+/* Footer quote */
+
+.site-footer .wrapper::after {
+  content: "你们的生命不会呐喊吗？";
+
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-top: 22px;
+  padding-top: 18px;
+
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.8;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -554,33 +614,7 @@ body::before {
   .page-content li {
     font-size: 14.5px;
   }
-}
 
-
-/* 13. Footer quote
-   --------------------------------------------------------- */
-
-.site-footer .wrapper::after {
-  content: "你们的生命不会呐喊吗？";
-
-  display: block;
-  margin-top: 18px;
-  padding-top: 18px;
-
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  line-height: 1.8;
-
-  text-align: center;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-}
-
-@media screen and (max-width: 480px) {
   .site-footer .wrapper::after {
     font-size: 16px;
     letter-spacing: 1px;
