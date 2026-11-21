@@ -5,7 +5,8 @@ title: Cybersecurity Portfolio
 
 # WU RONGXING
 
-**Cyber Security Postgraduate Student | Aspiring Penetration Tester**
+| Cyber Security Postgraduate Student | Aspiring Penetration Tester |
+| --- | --- |
 
 ## About Me
 
