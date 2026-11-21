@@ -1,0 +1,82 @@
+{
+  "evidence_metadata": {
+    "capture_point": "workbench eth0; records the authorised scanner vantage point",
+    "nmap_validation_xml": "nmap-validation.xml",
+    "pcap_file": "experiment.pcap",
+    "result_file": "result.json",
+    "scope_file": "scope.json",
+    "sha256_manifest": "SHA256SUMS"
+  },
+  "option": "tcp-syn-scan",
+  "parameters": {
+    "interface": "eth0",
+    "maximum_attempts": 2,
+    "maximum_rate_pps": 20,
+    "ports": [
+      22,
+      80,
+      443,
+      8080
+    ],
+    "target": "172.28.70.10",
+    "timeout_seconds": 1.5
+  },
+  "result_schema": "wqe7002-recon-result-v1",
+  "results": [
+    {
+      "attempts": 1,
+      "port": 22,
+      "responses": [
+        {
+          "flags": "SA",
+          "kind": "tcp",
+          "status": "open"
+        }
+      ],
+      "status": "open"
+    },
+    {
+      "attempts": 1,
+      "port": 80,
+      "responses": [
+        {
+          "flags": "SA",
+          "kind": "tcp",
+          "status": "open"
+        }
+      ],
+      "status": "open"
+    },
+    {
+      "attempts": 1,
+      "port": 443,
+      "responses": [
+        {
+          "flags": "SA",
+          "kind": "tcp",
+          "status": "open"
+        }
+      ],
+      "status": "open"
+    },
+    {
+      "attempts": 1,
+      "port": 8080,
+      "responses": [
+        {
+          "flags": "SA",
+          "kind": "tcp",
+          "status": "open"
+        }
+      ],
+      "status": "open"
+    }
+  ],
+  "scapy_version": "2.7.0",
+  "scope_id": "wqe7002-a1-standard-tcp-syn-scan-v1",
+  "tool_version": "0.1.0",
+  "utc_window": {
+    "end": "2026-11-09T06:58:18.099543Z",
+    "start": "2026-11-09T06:58:11.793640Z"
+  }
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Mon Nov  9 06:59:24 2026 as: nmap -n -Pn -sS -p 22,80,443,8080 -&#45;scan-delay 50ms -&#45;max-rate 20 -&#45;max-retries 1 -&#45;reason -oX /student/evidence/nmap-validation.xml 172.28.70.10 -->
+<nmaprun scanner="nmap" args="nmap -n -Pn -sS -p 22,80,443,8080 -&#45;scan-delay 50ms -&#45;max-rate 20 -&#45;max-retries 1 -&#45;reason -oX /student/evidence/nmap-validation.xml 172.28.70.10" start="1794207564" startstr="Mon Nov  9 06:59:24 2026" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="4" services="22,80,443,8080"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.70.10" addrtype="ipv4"/>
+<address addr="96:56:79:AC:E7:60" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1794207565" endtime="1794207565"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.28.70.10" addrtype="ipv4"/>
+<address addr="96:56:79:AC:E7:60" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+<times srtt="129" rttvar="1640" to="100000"/>
+</host>
+<runstats><finished time="1794207565" timestr="Mon Nov  9 06:59:25 2026" summary="Nmap done at Mon Nov  9 06:59:25 2026; 1 IP address (1 host up) scanned in 0.37 seconds" elapsed="0.37" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

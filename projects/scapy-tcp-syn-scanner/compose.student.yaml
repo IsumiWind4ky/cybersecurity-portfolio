@@ -1,0 +1,10 @@
+services:
+  workbench:
+    volumes:
+      - type: bind
+        source: ./src
+        target: /student/src
+        read_only: true
+      - type: bind
+        source: ./evidence
+        target: /student/evidence
