@@ -116,4 +116,4 @@ In the longer term, I also hope to explore AI security, particularly the securit
 - **Public Contact Email:** [208531439@qq.com](mailto:208531439@qq.com)
 - **Academic Email:** [17787173724@163.com](mailto:17787173724@163.com)
 - **GitHub:** [IsumiWind4ky](https://github.com/IsumiWind4ky)
-- **LinkedIn:** To be added
+- **LinkedIn:** [Rongxing Wu](https://www.linkedin.com/in/isumiwrx-57a069451/)

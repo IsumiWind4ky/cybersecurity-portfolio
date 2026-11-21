@@ -2,9 +2,11 @@
 
 This repository contains my cybersecurity learning portfolio, including my background, technical skills, training, practical projects, learning journey, and career objectives.
 
-## Website
+## Live Portfolio
 
-The portfolio is published with GitHub Pages. Configure **Settings → Pages → Deploy from a branch**, select `main` and `/(root)`.
+Visit my cybersecurity portfolio:
+
+[Cybersecurity Portfolio](https://isumiwind4ky.github.io/cybersecurity-portfolio/)
 
 ## Repository structure
 
