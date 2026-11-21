@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<style>
+  .site-header:not(.custom-site-header) {
+    display: none;
+  }
+</style>
+<header class="site-header custom-site-header" role="banner">
+  <div class="wrapper custom-nav-wrapper">
+
+    <a class="site-title" href="{{ '/' | relative_url }}">
+      {{ site.title | escape }}
+    </a>
+
+    <nav class="custom-nav" aria-label="Main navigation">
+
+      <a class="custom-nav-link" href="{{ '/' | relative_url }}">
+        Home
+      </a>
+
+      <details class="custom-dropdown">
+        <summary class="custom-nav-link">
+          Projects <span class="dropdown-arrow">▾</span>
+        </summary>
+
+        <div class="custom-dropdown-menu">
+
+          <a href="{{ '/projects/scapy-tcp-syn-scanner/' | relative_url }}">
+            <span class="project-number">01</span>
+            Scapy-Based TCP SYN Port Scanner
+          </a>
+
+          <a href="{{ '/projects/virtual-lab-reconnaissance/' | relative_url }}">
+            <span class="project-number">02</span>
+            Virtual Lab Setup and Network Reconnaissance
+          </a>
+
+        </div>
+      </details>
+
+    </nav>
+  </div>
+</header>
